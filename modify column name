@@ -1,0 +1,3 @@
+df is dataset
+$ names(df)[names(df) == "column_name_A"] <- "column_name_B" # change column name from 'column_name_A' to 'column_name_B'
+$ colnames(df) # check column names
