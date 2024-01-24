@@ -1,5 +1,0 @@
-df is dataset
-$ names(df)[names(df) == "column_name_A"] <- "column_name_B" # change column name from 'column_name_A' to 'column_name_B'
-$ colnames(df) # check column names
-
-https://www.datanovia.com/en/lessons/rename-data-frame-columns-in-r/#:~:text=Renaming%20columns%20with%20R%20base%20functions,column%20names%20where%20name%20%3D%20Sepal.
