@@ -1,26 +1,26 @@
-##load the packages
+## load the packages
 ```
 library(ggplot2)
 library(vegan)
 library(dplyr)
 ```
-##install package 'linkET'
+## install package 'linkET'
 ```
 install.packages("devtools")
 devtools::install_github("Hy4m/linkET", force = TRUE)
 packageVersion("linkET")
 library(linkET)
 ```
-##load example from vegan
+## load example from vegan
 ```
 data("varechem", package = "vegan")
 data("varespec", package = "vegan")
 ```
-##mantel test
+## mantel test
 ```
 mantel <- mantel_test(varespec, varechem, spec_select = list(Spec01 = 1:7,Spec02 = 8:18, Spec03 = 19:37,Spec04 = 38:44)) %>% mutate(rd = cut(r, breaks = c(-Inf, 0.2, 0.4, Inf),labels = c("< 0.2", "0.2 - 0.4", ">= 0.4")), pd = cut(p, breaks = c(-Inf, 0.01, 0.05, Inf), labels = c("< 0.01", "0.01 - 0.05", ">= 0.05")))
 ```
-##make plot of the mantel test result
+## make plot of the mantel test result
 ```
   set_corrplot_style()
   qcorrplot(correlate(varechem), type = "upper", diag = FALSE) +
