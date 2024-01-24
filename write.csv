@@ -1,1 +1,0 @@
-write.csv(data, file = paste(filename,".csv", sep = "_")) #write data to a csv file
